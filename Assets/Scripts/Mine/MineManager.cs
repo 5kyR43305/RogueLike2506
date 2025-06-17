@@ -10,11 +10,14 @@ public class MineManager : MonoBehaviour
     [SerializeField] Transform startPoint;
     [SerializeField] Transform endPoint;
 
+    /*private int difficultyLevel = 1;
+    private int maxDifficultyLevel = 10;*/
+
 
     void Start()
     {
         _3DTiles.transform.Clear();
-        _parent.transform.Clear();      
+        _parent.transform.Clear();
         SetupTile();
     }
 
@@ -32,7 +35,7 @@ public class MineManager : MonoBehaviour
             Debug.Log("siez x" + clone.GetComponent<Renderer>().bounds.size.x);
 
             clone.transform.position = pos;
-           // count++;
+            // count++;
             if (pos.x > endPoint.position.x) break;
 
         }
@@ -59,10 +62,29 @@ public class MineManager : MonoBehaviour
         }
     }
 
-   
+
     public void RemoveMines()
     {
         _parent.transform.Clear();
     }
+
+    /*void Update()
+    {
+        // 난이도 증가
+        if (Input.GetKeyDown(KeyCode.F9))
+        {
+            difficultyLevel = Mathf.Min(difficultyLevel + 1, maxDifficultyLevel);
+            Debug.Log($"난이도 증가: {difficultyLevel}");
+            CreateMines(difficultyLevel);
+        }
+
+        // 난이도 감소
+        if (Input.GetKeyDown(KeyCode.F10))
+        {
+            difficultyLevel = Mathf.Max(difficultyLevel - 1, 1);
+            Debug.Log($"난이도 감소: {difficultyLevel}");
+            CreateMines(difficultyLevel);
+        }
+    }*/
 }
 
