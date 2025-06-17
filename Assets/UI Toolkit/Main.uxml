@@ -1,0 +1,37 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; width: 200px;">
+        <ui:VisualElement name="Main" data-source="project://database/Assets/Scripts/SO/PlayerData.asset?fileID=11400000&amp;guid=18d12704638d2f445bbc3d06855e5e26&amp;type=2#PlayerData" style="flex-grow: 1; flex-shrink: 0; background-color: rgba(79, 236, 63, 0.31); display: flex; visibility: visible;">
+            <ui:ProgressBar value="22" title="my-progress" name="HPBar" data-source="project://database/Assets/Scripts/SO/PlayerData.asset?fileID=11400000&amp;guid=18d12704638d2f445bbc3d06855e5e26&amp;type=2#PlayerData" style="background-color: rgb(226, 131, 131);">
+                <Bindings>
+                    <ui:DataBinding property="value" data-source-path="HP" binding-mode="ToTarget" />
+                </Bindings>
+            </ui:ProgressBar>
+            <ui:Label text="Label" name="JumpForce" data-source="project://database/Assets/Scripts/SO/PlayerData%201.asset?fileID=11400000&amp;guid=dc7bfc6bee7db11428c02e7c284a3fcc&amp;type=2#PlayerData 1">
+                <Bindings>
+                    <ui:DataBinding property="text" data-source-path="JumpForce" binding-mode="ToTarget" />
+                </Bindings>
+            </ui:Label>
+            <ui:Label text="Label" name="Speed" data-source="project://database/Assets/Scripts/SO/PlayerData%201.asset?fileID=11400000&amp;guid=dc7bfc6bee7db11428c02e7c284a3fcc&amp;type=2#PlayerData 1" style="background-color: rgba(169, 229, 87, 0.57);">
+                <Bindings>
+                    <ui:DataBinding property="text" data-source-path="MoveSpeed" binding-mode="ToTarget" />
+                </Bindings>
+            </ui:Label>
+            <ui:Label text="Label" name="Time" />
+            <ui:Label text="Label" name="ETC" data-source="project://database/Assets/Scripts/SO/PlayerData%201.asset?fileID=11400000&amp;guid=dc7bfc6bee7db11428c02e7c284a3fcc&amp;type=2#PlayerData 1">
+                <Bindings>
+                    <ui:DataBinding property="text" data-source-path="life" binding-mode="ToTarget" />
+                </Bindings>
+            </ui:Label>
+        </ui:VisualElement>
+        <ui:VisualElement name="Clear" style="flex-grow: 1; display: flex; flex-shrink: 1; visibility: visible; overflow: visible;">
+            <ui:Label text="Clear" style="-unity-text-align: upper-center;" />
+            <ui:Button text="Next" name="NextBtn" />
+            <ui:Button text="Exit" name="ExitBtn" />
+        </ui:VisualElement>
+        <ui:VisualElement name="GameOver" style="flex-grow: 1;">
+            <ui:Label text="GameOver" style="-unity-text-align: upper-center;" />
+            <ui:Button text="Again" name="AgainBtn" />
+            <ui:Button text="Quit" name="QuitBtn" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
