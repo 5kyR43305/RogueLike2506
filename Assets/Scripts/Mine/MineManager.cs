@@ -1,26 +1,23 @@
-using System.Collections.Generic;
 using UnityEngine;
 
-public class StageManager : MonoBehaviour
+public class MineManager : MonoBehaviour
 {
     [SerializeField] GameObject[] _mines;
-    [SerializeField] GameObject[] _collectable;
-
     [SerializeField] Transform[] _positions;
     [SerializeField] Transform _parent;
     [SerializeField] Transform _3DTiles;
+    [SerializeField] GameObject[] _collectable;
     [SerializeField] Transform startPoint;
     [SerializeField] Transform endPoint;
 
-    public StageLevelSO[] stageLevels;
-    public StageLevelSO currentStageLevel;
+
+    
 
     void Start()
     {
         _3DTiles.transform.Clear();
         _parent.transform.Clear();
         SetupTile();
-
     }
 
     private void SetupTile()
@@ -37,51 +34,37 @@ public class StageManager : MonoBehaviour
             Debug.Log("siez x" + clone.GetComponent<Renderer>().bounds.size.x);
 
             clone.transform.position = pos;
-
+            // count++;
             if (pos.x > endPoint.position.x) break;
 
         }
     }
 
-    public void CreateCurrentStage(StageLevelSO currentStage)
-    {
-        List<GameObject> myObjects = new List<GameObject>();
-     
-        for(int i=0;i< currentStage.TrapAmount; i++)
-        {
-            GameObject clone = Instantiate(_mines[UnityEngine.Random.Range(0, _mines.Length)], _positions[i].position, Quaternion.identity);
-            myObjects.Add(clone);
-            
-        }
-
-    }
-    
 
     public void CreateMines(int max = 10)
     {
-        max = Mathf.Min(_positions.Length, max);
+        max = _positions.Length;
         for (int i = 0; i < max; i++)
         {
             GameObject clone = Instantiate(_mines[Random.Range(0, _mines.Length)], _positions[i].position, Quaternion.identity);
+
             clone.transform.parent = _parent;
         }
     }
-
     public void CreateCollectable(int max = 10)
     {
-        max = Mathf.Min(_positions.Length, max);
         for (int i = 0; i < max; i++)
         {
             GameObject clone = Instantiate(_collectable[Random.Range(0, _collectable.Length)], _positions[i].position, Quaternion.identity);
+
             clone.transform.parent = _parent;
         }
     }
 
+
     public void RemoveMines()
     {
-        foreach (Transform child in _parent)
-        {
-            Destroy(child.gameObject);
-        }
+        _parent.transform.Clear();
     }
 }
+

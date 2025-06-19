@@ -8,7 +8,7 @@ public class BaseMine:MonoBehaviour
     public static event Action<AudioType, Vector3> OnHitVFXEvent;
     public  PlayerData playerData;
     public AudioType myType;
-    public int damate;
+    public int Damage;
     public virtual void OnTriggerEnter(Collider other)
     {
         OnHitEvent?.Invoke(myType);
