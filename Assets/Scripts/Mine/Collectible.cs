@@ -15,6 +15,8 @@ public class Collectible : MonoBehaviour
     public PlayerData playerData;
     public AudioType myType;
 
+    public float JumpForce { get; internal set; }
+
     public virtual void OnTriggerEnter(Collider other)
     {
         OnHitEvent?.Invoke(myType);

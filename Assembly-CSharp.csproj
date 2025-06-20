@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Common\EX\TransformEX.cs" />
     <Compile Include="Assets\Scripts\Mine\Collectible.cs" />
+    <Compile Include="Assets\Scripts\Common\UTIL\UTILS.cs" />
     <Compile Include="Assets\Scripts\Mine\HiddenMine.cs" />
     <Compile Include="Assets\Scripts\Hero.cs" />
     <Compile Include="Assets\Scripts\SO\MineData.cs" />

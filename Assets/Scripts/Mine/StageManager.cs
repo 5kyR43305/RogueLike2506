@@ -1,16 +1,21 @@
+using NUnit.Framework;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class StageManager : MonoBehaviour
 {
     [SerializeField] GameObject[] _mines;
     [SerializeField] GameObject[] _collectable;
+    [SerializeField] GameObject _blockPrefeb;
 
     [SerializeField] Transform[] _positions;
     [SerializeField] Transform _parent;
     [SerializeField] Transform _3DTiles;
     [SerializeField] Transform startPoint;
     [SerializeField] Transform endPoint;
+
+    [SerializeField] StageLevelSO currentLevel;
 
     public StageLevelSO[] stageLevels;
     public StageLevelSO currentStageLevel;
@@ -20,7 +25,7 @@ public class StageManager : MonoBehaviour
         _3DTiles.transform.Clear();
         _parent.transform.Clear();
         SetupTile();
-
+        CreateCurrentStage(currentStageLevel);
     }
 
     private void SetupTile()
@@ -54,8 +59,28 @@ public class StageManager : MonoBehaviour
             
         }
 
+        for (int i = 0; i < currentStage.CollectibleAmount; i++)
+        {
+            GameObject clone = Instantiate(_collectable[Random.Range(0, _collectable.Length)]);
+            clone.GetComponent<Collectible>().JumpForce = currentStage.JumpForce;
+            myObjects.Add(clone);
+        }
+
+        for(int i=myObjects.Count;i<_positions.Length;i++)
+        {
+            GameObject clone = Instantiate(_blockPrefeb);
+            myObjects.Add(clone);
+        }
+
+        UTILS.Shuffle(myObjects);
+
+        for(int i = 0; i < myObjects.Count; i++)
+        {
+            myObjects[i].transform.position = _positions[i].position;
+            myObjects[i].transform.parent = _parent;
+        }
+        
     }
-    
 
     public void CreateMines(int max = 10)
     {
