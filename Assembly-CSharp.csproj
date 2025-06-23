@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\SO\MineData.cs" />
     <Compile Include="Assets\Scripts\Common\EventBus\EventBus.cs" />
     <Compile Include="Assets\Scripts\Jump.cs" />
+    <Compile Include="Assets\Scripts\ActionAnim\SwordAction.cs" />
     <Compile Include="Assets\UI Toolkit\MainUI.cs" />
     <Compile Include="Assets\Scripts\Mine\FinishLine.cs" />
     <Compile Include="Assets\Scripts\Common\EventBus\Events.cs" />
@@ -77,6 +78,8 @@
     <Compile Include="Assets\Scripts\Mine\Mine.cs" />
     <Compile Include="Assets\Scripts\Mine\MovementObstruction.cs" />
     <Compile Include="Assets\Scripts\Common\EventBus\PredefinedAssemblyUtil.cs" />
+    <Compile Include="Assets\Scripts\ActionAnim\MagnetAction.cs" />
+    <Compile Include="Assets\Scripts\ActionAnim\CoinAction.cs" />
     <Compile Include="Assets\Scripts\Mine\StageManager.cs" />
     <Compile Include="Assets\Scripts\Mine\MineManager.cs" />
     <Compile Include="Assets\Scripts\Common\EventBus\EventBusUtil.cs" />
