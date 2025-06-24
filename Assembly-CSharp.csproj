@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\Mine\MineManager.cs" />
     <Compile Include="Assets\Scripts\Common\EventBus\EventBusUtil.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\ActionAnim\LifeStarAction.cs" />
     <Compile Include="Assets\Scripts\Splines\SplinesManager.cs" />
     <Compile Include="Assets\Scripts\VFXManager.cs" />
     <Compile Include="Assets\Scripts\Common\UTIL\CameraMove.cs" />
