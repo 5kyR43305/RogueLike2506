@@ -54,7 +54,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0651f690e12c99e4ca849109f77be742, type: 2}
     - target: {fileID: 919132149155446097, guid: e6d85a4669ead4a44a31d300fb628fdb, type: 3}
       propertyPath: m_Name
-      value: Collectible_Trophy_01
+      value: Trophy
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6d85a4669ead4a44a31d300fb628fdb, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e6d85a4669ead4a44a31d300fb628fdb, type: 3}
       propertyPath: m_TagString

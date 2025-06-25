@@ -58,7 +58,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6893647203219540542, guid: 12802dbdfcefa354e88d1290d1764bd3, type: 3}
       propertyPath: m_Name
-      value: Prop_Flag_01 Variant
+      value: Flag
+      objectReference: {fileID: 0}
+    - target: {fileID: 6893647203219540542, guid: 12802dbdfcefa354e88d1290d1764bd3, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
