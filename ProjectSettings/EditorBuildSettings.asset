@@ -6,9 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/OutdoorsScene.unity
-    guid: 8124e5870f4fd4c779e7a5f994e84ad1
+    path: Assets/AssetHunts!/GameDev Starter Kit - Platformer/Demo Scene/LikeVillian.unity
+    guid: 31978288564543647a61ec1d3f45c502
+  - enabled: 0
+    path: Assets/New Scene.unity
+    guid: bafd9069d8249174f8a4693dfdf74621
   m_configObjects:
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 35845fe01580c41289b024647b1d1c53,
-      type: 3}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 35845fe01580c41289b024647b1d1c53, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -23,14 +23,11 @@ public class StageManager : MonoBehaviour
 
     void Start()
     {
-        //_3DTiles.transform.Clear();
-        //_parent.transform.Clear();
+        _3DTiles.transform.Clear();
+        _parent.transform.Clear();
         HidePosition();
         SetupTile();
-        //CreateCurrentStage(currentStageLevel);
-
-        StartCoroutine(CreateCurrentStageCor(currentStageLevel));
-
+        CreateCurrentStage(currentStageLevel);
     }
 
    
@@ -94,48 +91,11 @@ public class StageManager : MonoBehaviour
             myObjects[i].transform.position = _positions[i].position;
             myObjects[i].transform.parent = _parent;
         }
+
+
         
     }
-    public IEnumerator  CreateCurrentStageCor(StageLevelSO currentStage)
-    {
-        List<GameObject> myObjects = new List<GameObject>();
-
-        for (int i = 0; i < currentStage.TrapAmount; i++)
-        {
-          
-            GameObject clone = Instantiate(_mines[UnityEngine.Random.Range(0, _mines.Length)], _positions[i].position, Quaternion.identity);
-            myObjects.Add(clone);
-
-        }
-        yield return new WaitForSeconds(5);
-        Debug.Log("AAAAAAAAAAAAAAAAA");
-        for (int i = 0; i < currentStage.CollectibleAmount; i++)
-        {
-          
-            GameObject clone = Instantiate(_collectable[Random.Range(0, _collectable.Length)]);
-            clone.GetComponent<Collectible>().JumpForce = currentStage.JumpForce;
-            myObjects.Add(clone);
-        }
-        yield return new WaitForSeconds(5);
-        Debug.Log("BBBBBBBBBBBBBBBBBBBBBB");
-        for (int i = myObjects.Count; i < _positions.Length; i++)
-        {
-            yield return new WaitForSeconds(2);
-            GameObject clone = Instantiate(_blockPrefeb);
-            myObjects.Add(clone);
-        }
-        Debug.Log("CCCCCCCCCCCCCCCCCCCCCC");
-
-        UTILS.Shuffle(myObjects);
-
-        for (int i = 0; i < myObjects.Count; i++)
-        {
-            myObjects[i].transform.position = _positions[i].position;
-            myObjects[i].transform.parent = _parent;
-        }
-
-    }
-
+    
     public void CreateMines(int max = 10)
     {
         max = Mathf.Min(_positions.Length, max);

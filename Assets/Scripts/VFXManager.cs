@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class VFXManager : MonoBehaviour
 {
-    [SerializeField] ParticleSystem psPrefab;
+   
     
 
     void Start()
@@ -19,13 +19,7 @@ public class VFXManager : MonoBehaviour
 
     private void BaseMine_OnHitEvent(AudioType obj, Vector3 pos)
     {
-        ParticleSystem newParticle = Instantiate(psPrefab, pos, Quaternion.identity);
-
-    
-        newParticle.Play();
-
-      
-        Destroy(newParticle.gameObject, newParticle.main.duration + newParticle.main.startLifetime.constantMax);
+       
     }
 
 
