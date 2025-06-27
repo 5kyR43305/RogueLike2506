@@ -72,11 +72,13 @@
     <Compile Include="Assets\Scripts\ActionAnim\SwordAction.cs" />
     <Compile Include="Assets\UI Toolkit\MainUI.cs" />
     <Compile Include="Assets\Scripts\Mine\FinishLine.cs" />
+    <Compile Include="Assets\Scripts\Common\Math\CosineMovement.cs" />
     <Compile Include="Assets\Scripts\Common\EventBus\Events.cs" />
     <Compile Include="Assets\Scripts\SO\PlayerData.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Mine\Mine.cs" />
     <Compile Include="Assets\Scripts\Mine\MovementObstruction.cs" />
+    <Compile Include="Assets\Scripts\Common\Math\SineVerticalMovement.cs" />
     <Compile Include="Assets\Scripts\Common\EventBus\PredefinedAssemblyUtil.cs" />
     <Compile Include="Assets\Scripts\ActionAnim\MagnetAction.cs" />
     <Compile Include="Assets\Scripts\ActionAnim\CoinAction.cs" />
@@ -85,6 +87,7 @@
     <Compile Include="Assets\Scripts\Common\EventBus\EventBusUtil.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\ActionAnim\LifeStarAction.cs" />
+    <Compile Include="Assets\Scripts\Common\Math\MoveManager.cs" />
     <Compile Include="Assets\Scripts\Splines\SplinesManager.cs" />
     <Compile Include="Assets\Scripts\VFXManager.cs" />
     <Compile Include="Assets\Scripts\Common\UTIL\CameraMove.cs" />
@@ -93,6 +96,7 @@
     <Compile Include="Assets\Scripts\Mine\InstantEnd.cs" />
     <Compile Include="Assets\Scripts\SO\StageLevelSO.cs" />
     <Compile Include="Assets\Scripts\Common\EventBus\EventBinding.cs" />
+    <Compile Include="Assets\Scripts\Common\Math\TangentMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AssetHunts!\GameDev Starter Kit - Platformer\Hello Fellow Dev!.txt" />
